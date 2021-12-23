@@ -1,0 +1,9 @@
+/*
+QNum	: 5
+Date	: 2021.12.23
+About	: .unique()
+
+/*
+
+SELECT DISTINCT job
+    FROM emp;
