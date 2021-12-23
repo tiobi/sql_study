@@ -1,0 +1,7 @@
+/*
+QNum	: 1
+Date	: 2021.12.23
+About	: 테이블에서 특정 열 선택하기 
+/*
+
+SELECT empno, ename, sal FROM emp;
