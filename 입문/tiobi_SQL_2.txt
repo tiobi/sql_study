@@ -1,7 +1,12 @@
 /*
-QNum	: 1
+QNum	: 2
 Date	: 2021.12.23
-About	: 테이블에서 특정 열 선택하기 
+About	: 테이블에서 모든 열 선택하기 
 /*
 
-SELECT empno, ename, sal FROM emp;
+SELECT * FROM emp;
+
+/*
+맨 끝에 특정 컬럼을 한 번 더 출력 하려면:
+SELECT ename. *, ename FROM emp;
+/*
