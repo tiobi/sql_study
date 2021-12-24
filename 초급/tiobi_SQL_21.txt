@@ -1,6 +1,9 @@
 /*
-QNum	: 1
-Date	: 2021.12.23
+QNum	: 21
+Date	: 2021.12.24
 About	: 
-
+	특정 철자를 N개 채워서 출력. 
 /*
+
+SELECT ename, LPAD(sal, 10, '*') as salary1, RPAD(sal, 10, '#') as salary2
+    FROM emp;

@@ -1,6 +1,8 @@
 /*
-QNum	: 1
-Date	: 2021.12.23
+QNum	: 22
+Date	: 2021.12.24
 About	: 
-
+	특정 철자 잘라내기 
 /*
+SELECT 'smith', LTRIM('smith', 's'), RTRIM('smith', 'h'), TRIM('s' from 'smiths')
+    FROM DUAL;
