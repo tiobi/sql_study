@@ -1,6 +1,14 @@
 /*
-QNum	: 1
+QNum	: 30
 Date	: 2021.12.25
 About	: 
-
+	문자형으로 형변환
+	reminder: RRRR = 20C, YYYY = 21C
 /*
+
+SELECT hiredate, TO_CHAR(hiredate, 'RRRR') as 연도, 
+                TO_CHAR(hiredate, 'MM') as 달,
+                TO_CHAR(hiredate, 'DD') as 일, 
+                TO_CHAR(hiredate, 'DAY') as 요일
+    FROM emp
+    WHERE ename = 'KING';

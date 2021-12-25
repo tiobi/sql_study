@@ -1,6 +1,12 @@
 /*
-QNum	: 1
+QNum	: 37
 Date	: 2021.12.25
 About	: 
-
+	MIN()
 /*
+
+SELECT job, MIN(sal)
+    FROM emp
+    WHERE job != 'CLARK'
+    GROUP BY job
+    ORDER BY MIN(sal) desc;

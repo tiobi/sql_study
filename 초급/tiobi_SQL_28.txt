@@ -6,5 +6,6 @@ About	:
 	예) 2022 년 1월 4일부터 돌아올 월요일의 날짜 계산
 /*
 
-SELECT '2022/01/04' as 생일ㅎㅎ, NEXT_DAY('2022/01/04', '월요일')
+SELECT '2022/01/04' as 생일ㅎㅎ, 
+NEXT_DAY('2022/01/04', '월요일') as "Next Monday"
     FROM DUAL;
