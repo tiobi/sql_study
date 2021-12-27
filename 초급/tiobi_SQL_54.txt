@@ -1,6 +1,11 @@
 /*
-QNum	: 1
+QNum	: 54
 Date	: 2021.12.25
 About	: 
-
+	칼럼을 직접 선택해서 집계하기
+	GROUPING SETS((A), (B), ()) = A칼럼, B칼럼, 전체 집계
 /*
+
+SELECT deptno, job, SUM(sal)
+    FROM emp
+    GROUP BY GROUPING SETS((deptno), (job), ());
