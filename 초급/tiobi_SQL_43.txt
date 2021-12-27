@@ -1,6 +1,11 @@
 /*
-QNum	: 1
+QNum	: 43
 Date	: 2021.12.25
 About	: 
-
+	비율을 나누어 등급 출력하기 
 /*
+SELECT ename, job, sal,
+        NTILE(4) OVER (ORDER BY sal DESC NULLS LAST) AS 등급   
+       
+    FROM emp
+    WHERE job NOT IN ('PRESIDENT', 'CLERK');
