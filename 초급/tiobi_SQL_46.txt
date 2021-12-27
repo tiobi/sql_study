@@ -1,6 +1,12 @@
 /*
-QNum	: 1
-Date	: 2021.12.25
+QNum	: 46
+Date	: 2021.12.27
 About	: 
-
+	이전행과 다음행 출력하기 
 /*
+
+SELECT deptno, empno, ename, hiredate,
+    LAG(hiredate, 1) OVER (PARTITION BY deptno ORDER BY hiredate) AS LAG,
+    LEAD(hiredate, 1) OVER (PARTITION BY deptno ORDER BY hiredate) AS LEAD
+    FROM emp
+    ORDER BY deptno;
