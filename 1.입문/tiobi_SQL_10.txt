@@ -1,0 +1,9 @@
+/*
+QNum	: 10
+Date	: 2021.12.24
+About	: 
+	비교 연산자로 데이터 고르기
+/*
+SELECT ename as 이름, sal as 월급
+    FROM emp
+    where sal <= 1200;

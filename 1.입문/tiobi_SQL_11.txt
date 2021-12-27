@@ -1,0 +1,10 @@
+/*
+QNum	: 11
+Date	: 2021.12.24
+About	: 
+	BETWEEN 하한값 AND 상한값 -> 반대는 검색 되지 않는다. 
+	WHERE sal NOT BETWEEN 1000 AND 3000;
+/*
+SELECT ename as 이름, sal as 월급
+    FROM emp
+    WHERE sal BETWEEN 1000 AND 3000;

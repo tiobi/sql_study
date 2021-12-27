@@ -1,0 +1,9 @@
+/*
+QNum	: 3
+Date	: 2021.12.23
+About	: 컬럼 별칭을 사용해서 출력되는 컬럼명 변경하기 
+	따옴표를 사용해서 대소문자 구분. 
+/*
+
+SELECT empno as 사원이름, sal as "Salary", ename as name
+	FROM emp;
