@@ -1,8 +1,0 @@
-/*
-QNum	: 4
-Date	: 2021.12.23
-About	: 연결 연산자 사용하기
-/*
-
-SELECT ename|| '의 월급은' || sal || '입니다' as 월급정보
-    FROM emp;

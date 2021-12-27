@@ -1,8 +1,0 @@
-/*
-QNum	: 1
-Date	: 2021.12.23
-About	: 테이블에서 특정 열 선택하기 
-	  가독성을 높이기 위해 SQL은 대문자로 작성하고, 컬럼명과 테이블명은 소문자로 작성. 되도록 SELECT과 FROM절을 별도의 라인에 작성하길 권장. 들여쓰기 권장.
-/*
-
-SELECT empno, ename, sal FROM emp;

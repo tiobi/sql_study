@@ -1,8 +1,0 @@
-/*
-QNum	: 25
-Date	: 2021.12.24
-About	: 
-	나머지 값 출력하기
-/*
-SELECT empno, MOD(empno, 2)
-    FROM emp;

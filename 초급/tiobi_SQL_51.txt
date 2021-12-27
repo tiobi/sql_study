@@ -1,8 +1,0 @@
-/*
-QNum	: 51
-Date	: 2021.12.25
-About	: 
-	
-/*
-SELECT empno, ename, sal, ROUND(RATIO_TO_REPORT(sal) OVER (), 3) AS ∫Ò¿≤
-    FROM emp;

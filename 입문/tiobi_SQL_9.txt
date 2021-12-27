@@ -1,9 +1,0 @@
-/*
-QNum	: 9
-Date	: 2021.12.24
-About	: 
-	산술 연산자로 데이터 고르기
-/*
-SELECT ename, sal*12 as 연봉
-    FROM emp
-    where sal*12 >= 36000;

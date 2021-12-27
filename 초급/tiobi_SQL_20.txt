@@ -1,9 +1,0 @@
-/*
-QNum	: 20
-Date	: 2021.12.24
-About	: 
-	replace 문자를 다른 문자로 바꾸기
-/*
-
-SELECT ename, REPLACE(sal, 0, '*')
-    FROM emp;

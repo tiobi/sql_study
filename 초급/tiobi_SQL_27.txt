@@ -1,8 +1,0 @@
-/*
-QNum	: 27
-Date	: 2021.12.25
-About	: 
-	개월 수 더한 날짜 출력
-/*
-SELECT ADD_MONTHS(TO_DATE('2019-05-01', 'RRRR-MM-YY'), 100)
-    FROM DUAL;
