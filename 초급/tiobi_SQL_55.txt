@@ -9,4 +9,4 @@ SELECT ROW_NUMBER() OVER (ORDER BY sal DESC) AS ROW_NUM,
        DENSE_RANK() OVER (ORDER BY sal DESC) AS DENSE_RANK
                           
     FROM emp
-    WHERE deptno = 20;
+    WHERE deptno = 20; 
