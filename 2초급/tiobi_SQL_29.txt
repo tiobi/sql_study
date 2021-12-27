@@ -1,0 +1,9 @@
+/*
+QNum	: 29
+Date	: 2021.12.25
+About	: 
+	특정 날짜가 있는 달의 마지막 날짜 출력
+/*
+
+SELECT ename as 이름, hiredate as 입사일, LAST_DAY(hiredate)
+    FROM emp;

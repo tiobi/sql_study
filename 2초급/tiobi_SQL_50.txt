@@ -1,0 +1,15 @@
+/*
+QNum	: 50
+Date	: 2021.12.27
+About	: 
+	SUM() OVER 로 누적을 볼 수 있음. 
+	UNBOUNDED PRECEDING은 제일 첫 번째 행을 의미.
+	UNBOUNDED FOLLOWING은 가장 마지막 행
+	CURRENT ROW 는 현재 행을 의미함.
+/*
+
+SELECT job, empno, ename, sal, SUM(sal) OVER (PARTITION BY job
+                                        ORDER BY sal DESC ROWS
+                                        BETWEEN UNBOUNDED PRECEDING
+                                        AND CURRENT ROW) AS "SumSal"
+    FROM emp;

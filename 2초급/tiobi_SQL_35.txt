@@ -1,0 +1,14 @@
+/*
+QNum	: 1
+Date	: 2021.12.25
+About	: 
+	if 문을 case로 바꿔 쓰기 
+	DECODE는 등호만 가능하지만, CASE는 등호, 부등호 가능,. 
+/*
+SELECT ename, job, sal, CASE WHEN sal >= 3000 THEN 500
+                             WHEN sal >= 2000 THEN 300
+                             WHEN sal >= 1000 THEN 200
+                             ELSE 0 END as Bonus
+                             
+    FROM emp
+    WHERE job In ('SALESMAN', 'ANALYST');

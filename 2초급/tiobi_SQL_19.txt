@@ -1,0 +1,9 @@
+/*
+QNum	: 19
+Date	: 2021.12.24
+About	: 
+문자의 위치를 알려줌. 
+/*
+
+SELECT INSTR('SMITH', 'T')
+    FROM DUAL;

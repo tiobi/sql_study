@@ -1,0 +1,9 @@
+/*
+QNum	: 24
+Date	: 2021.12.24
+About	: 
+	숫자 버리기. ROUND와 사용 방법 비슷함.
+/*
+
+SELECT '876.567' as 숫자, TRUNC('876.567', 2)
+    FROM DUAL;

@@ -1,0 +1,10 @@
+/*
+QNum	: 52
+Date	: 2021.12.25
+About	: 
+	집계결과를 마지막에 출력하기 
+/*
+
+SELECT deptno, job, SUM(sal)
+    FROM emp
+    GROUP BY ROLLUP(deptno, job);

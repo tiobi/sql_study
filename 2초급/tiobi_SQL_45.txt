@@ -1,0 +1,13 @@
+/*
+QNum	: 45
+Date	: 2021.12.27
+About	: 
+	데이터를 가로로 출력하기 
+	연결 연산자를 사용하면 더 다양한 정보를 보여줄 수 있음.
+/*
+
+SELECT job, 
+    LISTAGG(ename || '(' || sal || ')', ',') WITHIN GROUP (ORDER BY ename ASC) AS "직원"
+    FROM emp
+    GROUP BY job;
+    

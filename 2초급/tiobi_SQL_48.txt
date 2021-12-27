@@ -1,0 +1,9 @@
+/*
+QNum	: 1
+Date	: 2021.12.25
+About	: 
+	PIVOT 절을 사용할 때는 FROM절을 꼭 사용해야 함. 
+/*
+SELECT *
+    FROM (SELECT deptno, sal from emp)
+    PIVOT (SUM(sal) FOR deptno IN (10, 20, 30));
