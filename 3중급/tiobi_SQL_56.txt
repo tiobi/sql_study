@@ -1,0 +1,11 @@
+/*
+QNum	: 56
+Date	: 2021.12.28
+About	: 
+	행 번호 선택해서 출력되는 행 수 제안하기.
+/*
+SELECT ROWNUM, empno, ename, job, sal
+    FROM emp
+    WHERE ROWNUM <= 8
+    AND job NOT IN ('PRESIDENT', 'CLERK')
+    ORDER BY sal DESC;
