@@ -1,6 +1,10 @@
 /*
-QNum	: 
-Date	: 2021.12.28
+QNum	: 58
+Date	: 2021.12.29
 About	: 
-
+	여러 테이블을 조인해서 출력
 /*
+
+SELECT ename, loc
+    FROM emp, dept
+    WHERE emp.deptno = dept.deptno
