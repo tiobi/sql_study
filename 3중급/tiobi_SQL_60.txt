@@ -1,6 +1,11 @@
 /*
-QNum	: 
-Date	: 2021.12.28
+QNum	: 60
+Date	: 2022.01.04
 About	: 
-
+	OUTER JOIN
+	JOIN에서 선택되지 않은 조건을 보여줌. 
+	(+)는 결과가 덜 나오는 쪽에 붙여줌. 
 /*
+SELECT e.ename, d.loc
+    FROM emp e, dept d
+    WHERE e.deptno (+)= d.deptno;
