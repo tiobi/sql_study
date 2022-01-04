@@ -1,6 +1,10 @@
 /*
-QNum	: 
-Date	: 2021.12.28
+QNum	: 59
+Date	: 2022.01.04
 About	: 
-
+	여러 테이블의 데이터를 조인하기 
+	조건이 equal이 아닌 경우 NON EQUI JOIN.
 /*
+SELECT e.ename, e.sal, s.grade
+    FROM emp e, salgrade s
+    WHERE e.sal between s.losal and s.hisal;
