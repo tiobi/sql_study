@@ -1,6 +1,17 @@
 /*
-QNum	: 
-Date	: 2021.12.28
+QNum	: 67
+Date	: 2022.01.09
 About	: 
-
+	데이터를 위아래로 연결하기
+	UNION 키워드를 사용해서 중복 데이터를 제거하고 하나의 결과로 출력.
+	ORDER BY키워드는 가장 마지막 쿼리에만 작성할 수 있다.
+	데이터 타입이 동일해야 하고, 칼럼의 개수도 동일해야 한다.
 /*
+
+SELECT deptno, sum(sal)
+    FROM emp
+    GROUP BY deptno
+
+UNION ALL
+SELECT TO_NUMBER(null), sum(sal)
+    FROM emp;

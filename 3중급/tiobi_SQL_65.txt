@@ -1,6 +1,11 @@
 /*
-QNum	: 
-Date	: 2021.12.28
+QNum	: 65
+Date	: 2022.01.09
 About	: 
-
+	JOIN이 안 되는 결과를 출력하기. LEFT, RIGHT OUTER JOIN
+	벤 다이어그램으로 생각하면 된다. 
 /*
+
+SELECT e.ename, e.job, e.sal, d.loc
+    FROM emp e RIGHT OUTER JOIN dept d
+    ON (e.deptno = d.deptno);

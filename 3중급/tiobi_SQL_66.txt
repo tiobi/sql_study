@@ -1,6 +1,11 @@
 /*
-QNum	: 
-Date	: 2021.12.28
+QNum	: 66
+Date	: 2022.01.09
 About	: 
-
+	FULL OUTER JOIN으로 모든 데이터를 보이기. 
+	FULL OUTER = LEFT OUTER + RIGHT OUTER 
 /*
+
+SELECT e.ename, e.job, e.sal, d.loc
+    FROM emp e FULL OUTER JOIN dept d
+    ON (e.deptno = d.deptno);

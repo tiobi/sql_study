@@ -1,6 +1,10 @@
 /*
-QNum	: 
-Date	: 2021.12.28
+QNum	: 63
+Date	: 2022.01.09
 About	: 
-
+	USING 절을 이용해서 조인하기. USING 절에는 반드시 괄호를 사용해야 함. 
 /*
+SELECT e.ename, e.job, e.sal, d.loc
+    FROM emp e JOIN dept d
+    USING (deptno)
+    WHERE e.job = 'SALESMAN';

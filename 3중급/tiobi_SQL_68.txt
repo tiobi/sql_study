@@ -1,6 +1,14 @@
 /*
-QNum	: 
-Date	: 2021.12.28
+QNum	: 68
+Date	: 2022.01.09
 About	: 
-
+	UNION 연산자는 UNION ALL과 달리 중복 데이터를 하나의 고유한 값으로 출력한다(중복을 제거한다는 뜻). 첫 번째 칼럼의 데이터를 내림차순으로 정렬하여 출력한다. 
 /*
+
+SELECT deptno, sum(sal)
+    FROM emp
+    GROUP BY deptno
+    
+UNION
+SELECT TO_NUMBER(null) as deptno, sum(sal)
+    FROM emp;
