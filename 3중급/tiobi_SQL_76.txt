@@ -1,0 +1,11 @@
+/*
+QNum	: 75
+Date	: 2022.01.09
+About	: 
+	FROM 절에 서브쿼리를 만들어서 IN LINE VIEW 만들기. 
+/*
+
+SELECT v.ename, v.sal, v.순위
+    FROM (SELECT ename, sal, RANK() OVER(ORDER BY sal DESC) as 순위
+            FROM emp) v
+    WHERE v.순위 < 6;

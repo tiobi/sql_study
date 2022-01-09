@@ -1,6 +1,14 @@
 /*
-QNum	: 
-Date	: 2021.12.28
+QNum	: 73
+Date	: 2022.01.09
 About	: 
-
+	not in 을 사용할 때 NULL값이 하나라도 있으면 결과가 출력되지 않는다. 
+	NULL이 있으면 전체 결과가 NLLL이 되기 때문.
+	따라서 NOT IN을 사용할 때 반드시 서브쿼리문에서 NULL이 아닌 값만 반환.
 /*
+
+SELECT ename, sal, job
+    FROM emp
+    WHERE empno not in (SELECT mgr
+                            FROM emp
+                            WHERE mgr is not null);

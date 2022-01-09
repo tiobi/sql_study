@@ -1,6 +1,14 @@
 /*
-QNum	: 
-Date	: 2021.12.28
+QNum	: 71
+Date	: 2022.01.09
 About	: 
-
+	특정 쿼리에서 검색한 값을 다른 쿼리에서 받아서 검색하기. 
+	괄호 안에 있는 게 서브쿼리, 밖이 메인 쿼리
 /*
+
+SELECT ename, sal
+    FROM emp
+    WHERE sal > (SELECT sal
+                    FROM emp
+                    WHERE ename = 'JONES')
+    AND ename != 'SCOTT';

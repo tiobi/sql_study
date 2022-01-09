@@ -1,0 +1,18 @@
+/*
+QNum	: 77
+Date	: 2022.01.09
+About	: 
+	서브쿼리로 단일 값을 조회하기
+	SELECT절에 거브 쿼리를 사용하지 않으면 에러 발생. 
+/*
+
+SELECT ename, sal,
+        (SELECT MAX(sal) 
+            FROM emp
+            WHERE job = 'SALESMAN') as "최대 월급",
+        (SELECT MIN(sal)
+            FROM emp
+            WHERE job = 'SALESMAN') as "최소 월급"
+            
+    FROM emp
+    WHERE job = 'SALESMAN';

@@ -1,0 +1,12 @@
+/*
+QNum	: 78
+Date	: 2022.01.09
+About	: 
+	테이블에 새로운 데이터를 입력하기
+	INSERT 입력
+	UPDATE 수정
+	DELETE 삭제
+	MERGE 입력, 수정, 삭제를 한 번에 수행
+/*
+INSERT INTO emp (empno, ename, sal, job)
+	VALUES(2812, 'JACK', 3500, 'ANALYIST');

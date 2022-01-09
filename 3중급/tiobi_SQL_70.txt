@@ -1,6 +1,15 @@
 /*
-QNum	: 
-Date	: 2021.12.28
+QNum	: 70
+Date	: 2022.01.09
 About	: 
-
+	MINUS키워드로 차집합 표현.
 /*
+
+SELECT ename, deptno, job, sal
+    FROM emp
+    WHERE deptno BETWEEN 10 AND 20
+MINUS
+
+SELECT ename, deptno, job, sal
+    FROM emp
+    WHERE deptno IN (20, 30);

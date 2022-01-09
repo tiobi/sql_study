@@ -1,6 +1,12 @@
 /*
-QNum	: 
-Date	: 2021.12.28
+QNum	: 74
+Date	: 2022.01.09
 About	: 
-
+	특정 테이블의 데이터가 다른 테이블에도 존재하면 출력
 /*
+
+SELECT *
+    FROM dept d
+    WHERE EXISTS (SELECT *
+                    FROM emp e
+                    WHERE e.deptno = d.deptno);
