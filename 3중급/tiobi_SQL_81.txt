@@ -1,6 +1,20 @@
 /*
-QNum	: 1
+QNum	: 81
 Date	: 2022.01.09
 About	: 
-
+	커밋하고 롤백하기
+	COMMIT 모든 사항을 데이터베이스에 반영
+	ROLLBACK 모든 변경사항을 취소
+	SAVEPOING 특정 지점까지의 변경 취소
 /*
+
+INSERT INTO emp(empno, ename, sla, deptno)
+    VALUES (1122, 'JACK', 3000, 20);
+    
+COMMIT;
+
+UPDATE emp
+    SET sal = 4000
+    WHERE ename = 'JACK';
+    
+ROLLBACK;
