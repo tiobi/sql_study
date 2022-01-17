@@ -1,6 +1,11 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 86
+Date	: 2022.01.17
 About	: 
-
+	서브쿼리를 사용해서 많은 데이터를 한 번에 수정.
 /*
+UPDATE emp
+SET sal = (SELECT sal
+            FROM emp
+            WHERE ename = 'ALLEN')
+WHERE job = 'SALESMAN';

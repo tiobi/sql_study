@@ -1,6 +1,14 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 88
+Date	: 2022.01.17
 About	: 
-
+	서브 쿼리를 사용해서 MERGE하기
 /*
+MERGE INTO dept d
+USING (SELECT deptno, sum(sal) sumsal
+            FROM emp
+            GROUP BY deptno) v
+            
+ON (d.deptno = v.deptno)
+WHEN MATCHED THEN
+UPDATE SET d.sumsal = v.sumsal;

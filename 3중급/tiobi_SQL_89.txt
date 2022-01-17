@@ -1,6 +1,10 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 89
+Date	: 2022.01.17
 About	: 
-
+	계층 서열 주기
 /*
+SELECT rpad(' ', level * 3) || ename as employss, level, sal, job
+    FROM emp
+    START WITH ename = 'KING'
+    CONNECT BY prior empno = mgr;

@@ -1,6 +1,10 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 85
+Date	: 2022.01.17
 About	: 
-
+	서브쿼리를 이용해 한 번에 여러 개의 행입력.
 /*
+INSERT INTO emp2(empno, ename, sal, deptno)
+SELECT empno, ename, sal, deptno
+    FROM emp
+    WHERE deptno = 10;
