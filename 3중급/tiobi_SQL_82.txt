@@ -1,6 +1,17 @@
 /*
-QNum	: 
-Date	: 2022.01.10
+QNum	: 82
+Date	: 2022.01.17
 About	: 
-
+	데이터 입력, 수정, 삭제 한 번에 하기
+	KW = MERGE
 /*
+
+MERGE INTO emp e
+USING dept d
+ON (e.deptno = d.deptno)
+
+WHEN MATCHED THEN
+	UPDATE SET e.loc = d.loc
+WHEN NOT MATCHED THEN
+	INSERT (e.empno, e.deptno, e.loc)
+	VALUES(1111, d.deptno, d.loc);
