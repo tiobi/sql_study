@@ -1,6 +1,14 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 93
+Date	: 2022.01.18
 About	: 
-
+	일반 테이블 생성하기
+	변수 데이터 유형을 많이 알아야 함!
 /*
+CREATE TABLE EMP01
+(
+EMPNO   NUMBER(10),
+ENAME   VARCHAR2(10),
+SAL     NUMBER(10, 2),
+HIREDATA    DATE
+);

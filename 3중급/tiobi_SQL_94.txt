@@ -1,6 +1,14 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 94
+Date	: 2022.01.18
 About	: 
-
+	COMMIT할 때까지 데이터를 저장하는 테이블을 생성
 /*
+
+CREATE GLOBAL TEMPORARY TABLE EMP37
+(
+EMPNO       NUMBER(10),
+ENAME       VARCHAR2(10),
+SAL         NUMBER(10)
+)
+ON COMMIT DELETE ROWS;
