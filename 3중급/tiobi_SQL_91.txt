@@ -1,6 +1,13 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 91
+Date	: 2022.01.18
 About	: 
-
+	계층형 질의문으로 서열이 있는 출력하기
+	SIBLING을 사용하면 질의문의 서열 순서를 깨트리지 않으며 출력할 수 있음.
 /*
+
+SELECT RPAD(' ', level * 3) || ename as employee, level, sal, job
+    FROM emp
+    START WITH ename = 'KING'
+    CONNECT BY PRIOR empno = mgr
+    ORDER SIBLINGS BY sal desc;

@@ -1,6 +1,10 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 90
+Date	: 2022.01.18
 About	: 
-
+	질의문의 결과 중에서 일부를 제외하기 위해 AND로 조건 추가
 /*
+SELECT rpad(' ', level * 3) || ename as employee, sal, job
+    FROM emp
+    START WITH ename = 'KING'
+    CONNECT BY prior empno = mgr AND ename != 'BLAKE';
