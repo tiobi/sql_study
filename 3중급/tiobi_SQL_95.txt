@@ -1,6 +1,12 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 95
+Date	: 2022.01.18
 About	: 
-
+	emp 데이블의 모든 칼럼이 아닌 일부 칼럼만 보기 위해 VIEW키워드 사용. 
+	보안상 공개하면 안 되는 데이터가 있을 때 사용.
 /*
+CREATE VIEW EMP_VIEW
+AS
+SELECT empno, ename, sal, job, deptno
+    FROM emp
+    WHERE job = 'SALESMAN';

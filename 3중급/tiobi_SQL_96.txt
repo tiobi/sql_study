@@ -1,6 +1,13 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 96
+Date	: 2022.01.18
 About	: 
-
+	VIEW 안에 함수가 포함되어 있으면 복합 뷰라고 부름. 
+	복합 뷰는 데이터를 수정할 수 없는 경우도 생김. 
 /*
+
+CREATE VIEW EMP_VIEW2
+AS
+SELECT deptno, round(avg(sal)) 평균월급
+    FROM emp
+    GROUP BY deptno;
