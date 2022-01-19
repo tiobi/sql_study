@@ -1,6 +1,12 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 98
+Date	: 2022.01.19
 About	: 
-
+	 데이터베이스에 ROW를 추가할 때 중복 번호 생성 방지를 위해 SEQUENCE
 /*
+
+CREATE SEQUENCE SEQ1
+START WITH 1
+INCREMENT BY 1
+MAXVALUE 100
+NOCYCLE;

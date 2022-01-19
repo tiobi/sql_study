@@ -1,6 +1,9 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 97
+Date	: 2022.01.19
 About	: 
-
+	INDEX를 사용해서 SEARCHING 속도 높이기
 /*
+
+CREATE INCEX EMP_SAL
+	ON EMP(SAL);
