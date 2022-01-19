@@ -1,6 +1,22 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 108
+Date	: 2022.01.19
 About	: 
-
+	FOREIGN KEY를 설어 생성하면 dept7는 부모 테이블, emp7는 자식 테이블.
+	자식 테이블은 부모 테이블에 존재하는 데이터만 입력, 수정 가능
 /*
+
+CREATE TABLE dept7
+(
+deptno  NUMBER(10) CONSTRAINT dept7_deptno_pk PRIMARY KEY,
+dname   VARCHAR(14),
+loc     VARCHAR(10)
+);
+
+CREATE TABLE emp7
+(
+empno   NUMBER(10),
+ename   VARCHAR(14),
+sal     NUMBER(10),
+deptno  NUMBER(10) CONSTRAINT emp7_deptno_FK REFERENCES dept7(deptno)
+);

@@ -1,6 +1,12 @@
 /*
-QNum	: 1
+QNum	: 111
 Date	: 2022.01.10
 About	: 
-
+	알고리즘 1: 구구단
 /*
+
+WITH LOOP_TABLE AS (SELECT LEVEL AS NUM
+				FROM DUAL
+				CONNECT BY LEVEL <= 9)
+	SELECT 2 * NUM
+		FROM LOOP_TABLE;

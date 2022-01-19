@@ -1,6 +1,12 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 105
+Date	: 2022.01.19
 About	: 
-
+	UNIQUE 제약은 중복된 데이터를 허용하지 않지만, 
 /*
+CREATE TABLE detp3
+(
+deptno  NUMBER(10),
+dname   VARCHAR(15) CONSTRAINT dept3_dname_UN UNIQUE,
+loc     VARCHAR(10)
+);

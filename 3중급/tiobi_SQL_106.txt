@@ -1,6 +1,13 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 106
+Date	: 2022.01.19
 About	: 
-
+	NOT NULL 제약은 중복 값 방지
 /*
+
+CREATE TABLE dept5
+(
+deptno  NUMBER(10),
+dname   VARCHAR2(14),
+loc     VARCHAR2(10) CONSTRAINT dept5_loc_NN NOT NULL
+);

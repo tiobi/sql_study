@@ -1,6 +1,18 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 110
+Date	: 2022.01.19
 About	: 
-
+	«— º≠∫Íƒı∏Æ∞° ¥Ÿ∏• º≠∫Íƒı∏Æ∏¶ ¬¸¡∂«“ ºˆ ¿÷∞‘ «‘.
 /*
+WITH JOB_SUMSAL AS (SELECT job, SUM(SAL) ≈‰≈ª
+                        FROM emp
+                        GROUP BY job),
+    DEPTNO_SUMSAL AS (SELECT deptno, SUM(sal) ≈‰≈ª
+                        FROM emp
+                        GROUP BY deptno
+                        HAVING SUM(sal) > (SELECT AVG(≈‰≈ª) + 3000
+                                                FROM JOB_SUMSAL))
+                                                
+    SELECT deptno, ≈‰≈ª
+        FROM DEPTNO_SUMSAL;
+                        

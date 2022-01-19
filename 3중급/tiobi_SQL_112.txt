@@ -1,6 +1,15 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 112
+Date	: 2022.01.19
 About	: 
-
+	알고리즘 2: 구구단 출력
 /*
+WITH ROOP_TABLE AS (SELECT LEVEL AS NUM
+                        FROM DUAL
+                        CONNECT BY LEVEL <= 9),
+    G_TABLE AS (SELECT LEVEL + 1 AS NUM
+                    FROM DUAL
+                    CONNECT BY LEVEL <= 8)
+                    
+    SELECT TO_CHAR(A.NUM) || 'X' || TO_CHAR(B.NUM) || '=' || A.NUM * B.NUM AS G
+        FROM ROOP_TABLE A, G_TABLE B;

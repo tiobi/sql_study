@@ -1,6 +1,12 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 103
+Date	: 2022.01.19
 About	: 
-
+	특정 버전을 복구하기 위해 flashback_trascaction_query 사용
 /*
+
+SELECT undo_sql
+    FROM flashback_transaction_query
+    WHERE table_owner = 'SCOTT' AND table_name = 'EMP'
+    AND commit_scn BETWEEN 9457390 and 9457397
+    ORDER BY start_timestamp desc;

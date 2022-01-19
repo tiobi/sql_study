@@ -1,6 +1,15 @@
 /*
-QNum	: 1
+QNum	: 109
 Date	: 2022.01.10
 About	: 
-
+	동일한 sql이 반복적으로 사용 될 때 WITH절을 사용하면 됨
+	WITH 는 TEMP영역에 테이블을 저장하기 때문에 검색 시간을 줄일 수 있음.
 /*
+
+WITH JOB_SUMSAL AS (SELECT job, sum(sal) as "Total"
+                        FROM emp
+                        GROUP BY job)
+                        
+    SELECT job, "Total"
+        FROM JOB_SUMSAL
+        WHERE "Total" > (SELECT AVG("Total") FROM JOB_SUMSAL);
