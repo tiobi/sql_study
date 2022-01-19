@@ -1,6 +1,9 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 101
+Date	: 2022.01.19
 About	: 
-
+	DROP한 테이블 복구하기.
+	오라클에 휴지통 기능이 생겼음.
 /*
+
+FLASHBACK TABLE emp TO BEFORE DROP;

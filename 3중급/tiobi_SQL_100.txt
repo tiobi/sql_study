@@ -1,6 +1,13 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 100
+Date	: 2022.01.19
 About	: 
-
+	실수로 지운 데이터 FLASHBACK
+	ALTER 명령어를 사용해서 플래쉬백이 가능한 상태로 변경,
+	FLASHBACK은 시점 전까지 수행했던 작업을 반대로 수행. 
+		예) DELETE가 있었으면 반대로 INSERT 수행
 /*
+
+ALTER TABLE emp ENABLE ROW MOVEMENT;
+
+FLASHBACK TABLE emp TO TIMESTAMP (SYSTIMESTAMP - INTERVAL '5' MINUTE);

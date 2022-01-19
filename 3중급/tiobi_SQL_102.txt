@@ -1,6 +1,16 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 102
+Date	: 2022.01.19
 About	: 
-
+	FLASHBACK VERSION QUERY로 특정 데이터가 지금까지 어떻게 변경되어
+	왔는지 히력 정보를 출력
 /*
+
+SELECT ename, sal, versions_starttime, versions_endtime, versions_operation
+    FROM emp
+    VERSIONS BETWEEN TIMESTAMP
+        TO_TIMESTAMP('2022-01-10', 'RRRR-MM-DD')
+        AND MAXVALUE
+        
+    WHERE ename = 'KING'
+    ORDER BY versions_starttime;
