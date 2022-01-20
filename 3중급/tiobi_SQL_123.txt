@@ -1,6 +1,18 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 123
+Date	: 2022.01.20
 About	: 
-
+	CASE 문은 반드시 END로 종료해야 한다.
+	AS 다음의 컬럼 별칭을 쌍따옴표로 한 이유는 띄어스기 때문.
 /*
+
+ACCEPT N1 PROMPT 'WIDTH: ';
+ACCEPT N2 PROMPT 'HEIGHT: ';
+ACCEPT N3 PROMPT 'V: ';
+
+SELECT CASE 
+    WHEN (POWER(&N1, 2) + POWER(&N2, 2)) = POWER(&N3, 2)
+    THEN '직각삼각형'
+    ELSE '직각 삼각형이 아님'
+    END AS "피타고라스의 정리"
+    FROM DUAL;

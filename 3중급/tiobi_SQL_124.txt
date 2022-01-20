@@ -1,6 +1,24 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 124
+Date	: 2022.01.20
 About	: 
-
+	몬테카를로 알고리즘
+	DBMS_RANDOM 패키지로 랜덤 좌표을 찍고
+	원점과의 거리를 계산해서 원주율을 대략적으로 구함.
+	3.140596 나왔음
 /*
+
+SELECT SUM(CASE WHEN (POWER(N1, 2) + POWER(N2, 2)) <= 1 THEN 1 ELSE 0 END) / 1000000 * 4 AS "원주율"
+
+    FROM (
+        SELECT DBMS_RANDOM.VALUE(0, 1) AS N1,
+                DBMS_RANDOM.VALUE(0, 1) AS N2
+                FROM DUAL
+                CONNECT BY LEVEL < 1000000);
+                
+                
+                
+                
+                
+                
+                       
