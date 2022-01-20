@@ -1,6 +1,15 @@
 /*
-QNum	: 1
+QNum	: 114
 Date	: 2022.01.10
 About	: 
-
+	삼각형 출력.
+	UNDEFINE으로 변수 입력할 수 있음. 
 /*
+
+UNDEFINE N1
+
+WITH LOOP_TABLE AS (SELECT LEVEL AS NUM
+                        FROM DUAL
+                        CONNECT BY LEVEL <= 8)
+    SELECT LPAD(' ',10 - &N1, ' ') || LPAD('*', NUM, '*') AS STAR
+        FROM LOOP_TABLE;

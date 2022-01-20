@@ -1,6 +1,13 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 115
+Date	: 2022.01.20
 About	: 
-
+	»ï°¢Çü Ãâ·Â
 /*
+
+UNDEFINE p_num
+ACCEPT p_num PROMPT 'ENTER NUM : '
+
+SELECT LPAD(' ', &p_num - level, ' ') || RPAD('*', level, '*') as star
+    FROM DUAL
+    CONNECT BY level < &p_num + 1;

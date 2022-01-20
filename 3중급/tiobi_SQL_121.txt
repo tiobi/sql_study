@@ -1,6 +1,21 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 121
+Date	: 2022.01.20
 About	: 
-
+	최대공약수
 /*
+
+
+UNDEFINE N1
+UNDEFINE N2
+ACCEPT N1 PROMPT 'ENTER N1: ';
+ACCEPT N2 PROMPT 'ENTER N2: ';
+
+WITH ND AS (SELECT &N1 AS N1, &N2 AS N2
+                FROM DUAL)
+                
+SELECT MAX(LEVEL) AS MAX
+    FROM ND
+    WHERE MOD(N1, LEVEL) = 0
+    AND MOD(N2, LEVEL) = 0
+    CONNECT BY LEVEL <= N2;

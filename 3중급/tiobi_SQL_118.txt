@@ -1,6 +1,12 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 118
+Date	: 2022.01.20
 About	: 
-
+	¼ýÀÚÀÇ °ö
 /*
+undefine n1
+ACCEPT n1 PROMPT 'ENTER N1: ';
+
+SELECT ROUND(EXP(SUM(LN(LEVEL)))) AS MUL
+    FROM DUAL
+    CONNECT BY LEVEL <= &n1;

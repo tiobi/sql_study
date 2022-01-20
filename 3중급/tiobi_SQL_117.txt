@@ -1,6 +1,13 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 117
+Date	: 2022.01.20
 About	: 
-
+	숫자의 합
 /*
+
+undefine n1
+ACCEPT n1 PROMPT 'ENTER N1: ';
+
+SELECT SUM(LEVEL) AS SUM
+    FROM DUAL
+    CONNECT BY LEVEL <= &n1;

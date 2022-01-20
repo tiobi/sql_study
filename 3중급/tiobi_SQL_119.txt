@@ -1,6 +1,14 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 119
+Date	: 2022.01.20
 About	: 
-
+	짝수만 출력하기 
 /*
+
+undefine n1
+ACCEPT n1 PROMPT 'ENTER N1: ';
+
+SELECT LISTAGG(LEVEL, ', ') AS EVEN
+    FROM DUAL
+    WHERE MOD(LEVEL, 2) = 0
+    CONNECT BY LEVEL <= &n1;

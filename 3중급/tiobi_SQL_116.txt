@@ -1,6 +1,17 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 116
+Date	: 2022.01.20
 About	: 
-
+	사각형 출력. 변수입력.
 /*
+undefine p1
+undefine p2
+ACCEPT p1 PROMPT 'ENTER P1';
+ACCEPT p2 PROMPT 'ENTER P2';
+
+WITH LOOP_TABLE AS  (SELECT LEVEL AS NUM
+                            FROM DUAL
+                            CONNECT BY LEVEL <= &p2)
+                            
+        SELECT LPAD('*', &p1, '*') AS STAR
+            FROM LOOP_TABLE
