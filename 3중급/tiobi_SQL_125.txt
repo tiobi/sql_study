@@ -1,6 +1,16 @@
 /*
-QNum	: 1
-Date	: 2022.01.10
+QNum	: 125
+Date	: 2022.01.20
 About	: 
-
+	자연상수 구하기 
 /*
+
+WITH LOOP_TABLE AS (SELECT LEVEL AS NUM
+                        FROM DUAL
+                        CONNECT BY LEVEL <= 10000)
+    
+SELECT RESULT 
+    FROM (SELECT NUM, POWER((1 + 1/NUM), NUM) AS RESULT
+            FROM LOOP_TABLE)
+            
+    WHERE NUM = 10000;
